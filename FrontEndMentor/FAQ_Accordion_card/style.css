@@ -1,0 +1,107 @@
+/*  --------- javaScript's functions styles ---------*/
+li p {
+    display: none;
+}
+li p.active {
+    display: block
+}
+
+/*   -------------- Body -------------- */
+body{
+    max-width: 1400px;
+    border:2px solid blue;
+    display: block;
+    margin: 0 auto;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+.globalContainer{
+    background-image: linear-gradient(to bottom,#ad68e9, #6a63e7);
+    padding-top: 100px;
+    min-height: 720px;
+}
+/* ------------ Main container ------------- */
+.mainContainer{
+    display: flex;
+    max-width: 960px;
+    margin:0 auto;
+    font-size: 12px;
+    background-color:#fff;
+    border-radius: 15px;
+    box-shadow: 10px 10px 4px rgba(0,0,0,.2);
+}
+
+/*  --------------- woman image config ----------------*/
+.img{
+    position:relative;
+}
+.woman{
+    width:400px;
+    margin:50px 0 50px -50px
+}   
+.womanShadown{
+    width:400px;
+    position: absolute;
+    margin:40px 0 50px -400px
+}
+.womanBox{
+    position: absolute;
+    margin:130px 0 0 -100px; 
+}
+
+/* ------ faq styles ------*/
+.faq{
+    width: 100%;
+    padding:10px 60px 20px 40px;
+}
+.faq h1{
+    text-indent: 40px;
+    letter-spacing: .1em;
+
+}
+@keyframes rotate{
+    from{
+        transform: rotate(0deg)
+    }
+    to{
+        transform:rotate(180deg)
+    }
+}
+.faq h2 img{
+    display: block;
+    float: right;
+}
+.faq h2 img.active{
+    animation: rotate .5s forwards;
+}
+.faq h2{
+    font-weight: 400;
+}
+.faq h2:hover{
+    cursor: pointer;
+}
+.faq h2.active{
+    font-weight: bolder;
+}
+.faq p{
+    line-height: 1.2em;
+    font-size: 1.250em;
+}
+/* -------------- list -------------- */
+ul{
+    list-style: none;
+    padding-top: 10px;
+}
+ul li{
+    border-bottom: 2px dotted #333;
+}
+
+/* ----------- attribution ------------- */
+.attribution{
+   margin: 30px 0 0 0;
+   text-align:center;
+   color:#fff;
+   font-size: 1.2em;
+}
+.attribution a{
+    color:currentColor
+}
