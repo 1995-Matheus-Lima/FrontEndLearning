@@ -1,107 +1,185 @@
 /*  --------- javaScript's functions styles ---------*/
 li p {
-    display: none;
+  display: none;
 }
 li p.active {
-    display: block
+  display: block;
 }
 
 /*   -------------- Body -------------- */
-body{
-    max-width: 1400px;
-    border:2px solid blue;
-    display: block;
-    margin: 0 auto;
-    font-family: 'Kumbh Sans', sans-serif;
+body {
+  max-width: 1400px;
+  display: block;
+  margin: 0 auto;
+  font-family: "Kumbh Sans", sans-serif;
 }
-.globalContainer{
-    background-image: linear-gradient(to bottom,#ad68e9, #6a63e7);
-    padding-top: 100px;
-    min-height: 720px;
+.globalContainer {
+  background-image: linear-gradient(to bottom, #a163e7, #6a63e7);
+  padding-top: 100px;
+  min-height: 720px;
 }
 /* ------------ Main container ------------- */
-.mainContainer{
-    display: flex;
-    max-width: 960px;
-    margin:0 auto;
-    font-size: 12px;
-    background-color:#fff;
-    border-radius: 15px;
-    box-shadow: 10px 10px 4px rgba(0,0,0,.2);
+.mainContainer {
+  display: flex;
+  max-width: 960px;
+  margin: 0 auto;
+  font-size: 12px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.2);
 }
 
 /*  --------------- woman image config ----------------*/
-.img{
-    position:relative;
+.img {
+  position: relative;
 }
-.woman{
-    width:400px;
-    margin:50px 0 50px -50px
-}   
-.womanShadown{
-    width:400px;
-    position: absolute;
-    margin:40px 0 50px -400px
+.woman {
+  width: 400px;
+  margin: 50px 0 50px -50px;
 }
-.womanBox{
-    position: absolute;
-    margin:130px 0 0 -100px; 
+.womanShadown {
+  width: 400px;
+  position: absolute;
+  margin: 40px 0 50px -400px;
+}
+.womanBox {
+  position: absolute;
+  margin: 130px 0 0 -100px;
 }
 
 /* ------ faq styles ------*/
-.faq{
-    width: 100%;
-    padding:10px 60px 20px 40px;
+.faq {
+  width: 100%;
+  padding: 10px 60px 20px 40px;
 }
-.faq h1{
-    text-indent: 40px;
-    letter-spacing: .1em;
-
+.faq h1 {
+  text-indent: 40px;
+  letter-spacing: 0.1em;
 }
-@keyframes rotate{
-    from{
-        transform: rotate(0deg)
-    }
-    to{
-        transform:rotate(180deg)
-    }
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
 }
-.faq h2 img{
-    display: block;
-    float: right;
+.faq h2 img {
+  display: block;
+  float: right;
 }
-.faq h2 img.active{
-    animation: rotate .5s forwards;
+.faq h2 img.active {
+  animation: rotate 0.5s forwards;
 }
-.faq h2{
-    font-weight: 400;
+.faq h2 {
+  font-weight: 400;
 }
-.faq h2:hover{
-    cursor: pointer;
+.faq h2:hover {
+  cursor: pointer;
 }
-.faq h2.active{
-    font-weight: bolder;
+.faq h2.active {
+  font-weight: bolder;
 }
-.faq p{
-    line-height: 1.2em;
-    font-size: 1.250em;
+.faq p {
+  line-height: 1.2em;
+  font-size: 1.25em;
 }
 /* -------------- list -------------- */
-ul{
-    list-style: none;
-    padding-top: 10px;
+ul {
+  list-style: none;
+  padding-top: 10px;
 }
-ul li{
-    border-bottom: 2px dotted #333;
+ul li {
+  border-bottom: 2px dotted #333;
 }
 
 /* ----------- attribution ------------- */
-.attribution{
-   margin: 30px 0 0 0;
-   text-align:center;
-   color:#fff;
-   font-size: 1.2em;
+.attribution {
+  margin: 30px 0 0 0;
+  text-align: center;
+  color: #fff;
+  font-size: 1.2em;
 }
-.attribution a{
-    color:currentColor
+.attribution a {
+  color: currentColor;
+}
+
+@media (max-width: 1080px) and (min-width: 951px) {
+  .mainContainer {
+    max-width: 840px;
+  }
+}
+
+@media (max-width: 950px) and (min-width: 668px) {
+  .mainContainer {
+    max-width: 600px;
+  }
+  .woman {
+    width: 300px;
+    margin: 50px 0 50px -20px;
+  }
+  .womanShadown {
+    width: 300px;
+    position: absolute;
+    margin: 40px 0 50px -280px;
+  }
+  .womanBox {
+    width: 140px;
+    position: absolute;
+    margin: 130px 0 0 -70px;
+  }
+  .faq h2 img {
+    position:relative;
+    right:-10px;
+  }
+  .faq h2{
+    font-size: 1.3em;
+  }
+  .attribution{
+    font-size: 1em;
+  }
+}
+@media (max-width: 667px){
+  .globalContainer {
+    padding-top: 140px;
+  }
+  .mainContainer {
+    max-width: 300px;
+    flex-direction: column;
+  }
+  .img{
+    margin-top:-130px
+  }
+  .woman {
+    width: 280px;
+    margin: 0 0 0 10px;
+  }
+  .womanShadown {
+    width: 280px;
+    margin: -40px 0 0 -280px;
+
+  }
+  .womanBox {
+    width: 120px;
+    margin: 70px 0 0 -20px;
+  }
+  .faq{
+   padding: 0px;
+  }
+  .faq h1{
+    text-align: center;
+  }
+  ul li {
+    max-width: 250px;
+    padding: 0px;
+    margin-left:-20px;
+  }
+  .faq h2 img {
+    position:relative;
+    right:-10px;
+  }
+ 
+  .attribution{
+    font-size: 1em;
+  }
 }
