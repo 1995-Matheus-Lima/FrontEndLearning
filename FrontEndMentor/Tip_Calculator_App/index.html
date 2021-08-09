@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <link rel='stylesheet' href='style.css'/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class='globalContainer'>
+    <div class='title'>
+      <img src="./images/logo.svg" alt="logo">
+    </div>
+    <div class='mainContainer'>
+      <div class='getData'>
+        <h2>Bill <span class='billSpan'></span></h2>
+        <input type='number' class='bill' placeholder="0">
+        <img class ='img' src="./images/icon-dollar.svg" alt='icon-person'>
+        <h2>Select Tip %</h2>
+        <ul class= 'tip'>
+          <li value='5'>5%</li>
+          <li value='10'>10%</li>
+          <li value='15' >15%</li>
+          <li value='25'>25%</li>
+          <li value='50' >50%</li>
+          <input type='number' placeholder="Custom">
+        </ul>
+        <h2>Number of People <span class="peopleSpan"></span></h2>
+        <input type="number"  class='people' placeholder="0">
+        <img class ='img' src="./images/icon-person.svg" alt="icon-dollar" >
+      </div>
+      <div class='showData'>
+        <div>
+          <div>
+            <h2>Tip Amount<br/>
+            <p>/ person</p></h2>
+          </div>
+            <span class='tipAmount'>$ 0.00</span>
+        </div>
+        <div>
+          <div>
+          <h2>Total<br/>
+          <p>/ person</p></h2>
+          </div>
+          <span class='total'>$ 0.00</span>
+        </div>
+        <button class='reset'>Reset</button>
+      </div>
+    </div>
+    <div>
+      <p class='valueBill'></p>
+      <p class='valueTip'></p>
+      <p class='valuePeople'></p>
+    </div>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://www.linkedin.com/in/matheus-henrique-275411151/" target="_blank">Matheus Henrique dos Santos Lima</a>.
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
