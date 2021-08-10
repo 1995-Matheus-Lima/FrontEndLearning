@@ -7,7 +7,7 @@ body{
     max-width: 1400px;
     background-color: #c5e4e7;
     margin:-20px auto 0 auto;
-    padding: 60px 0;
+    padding: 50px 0 10px 0;
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -29,7 +29,7 @@ input[type=number] {
 .mainContainer{
     max-width:840px;
     display: flex;
-    margin:30px auto 60px auto;
+    margin:30px auto 10px auto;
     padding:20px;
     background-color: #fff;
     border-radius: 20px;
@@ -82,7 +82,6 @@ h2{
     font-weight: bold;
     margin-bottom: 20px;
     border-radius: 5px;
-    box-shadow: 2px 2px 2px #333;
 }
 .getData li:hover{
     cursor: pointer;
@@ -120,6 +119,7 @@ h2 span {
     background-color:#00494D;
     color:#fff;
     padding-right: 10px;
+    margin-left: 20px;
 }
 .showData div{
     display: flex;
@@ -168,4 +168,56 @@ h2 span {
 .getData .check{
     outline-color: tomato;
     border: 2px solid tomato;
+}
+/* -------------- hide values to calculus ---------*/
+.hideValues{
+    display: none;
+}
+
+@media (max-width:770px){
+    .showData span{
+        font-size: 1.125em;  
+    }
+    .showData div div h2{
+        font-size: .8em;
+    }
+    .showData div div p{
+       font-size: .6em;
+       margin-bottom: 30px;
+    }
+}
+@media (max-width:649px){
+    .mainContainer{
+        flex-wrap: wrap;
+        width: 300px;
+    }   
+    .getData,.showData{
+        width: 280px;
+    }
+    .getData{
+        height: 400px;
+    }
+    .getData li, .getData ul input{
+        width: 45%;
+    }
+    .showData{
+        margin:0 auto;
+    }
+    .showData button{
+        margin:0 auto;
+    }
+    .showData{
+        margin-top: 10px;
+        height: 200px;
+    }
+}
+/* ------------- attribution ----------*/
+.attribution{
+    color:#5E7A7D;
+    font-size:.8em;
+    text-align: center;
+}
+.attribution a{
+    text-decoration: none;
+    color: #00494D;
 }
