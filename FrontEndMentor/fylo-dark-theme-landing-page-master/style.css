@@ -1,0 +1,79 @@
+/*  --------------- General Styles -------------- */
+body{
+    max-width: 1400px;
+    background-color: hsl(218, 28%, 13%);
+    margin:0 auto;
+    position:relative;
+    color:hsl(0, 0%, 100%);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    padding: 0px;
+}
+.container{
+    max-width: 960px;
+    margin:0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* --------------- Reader ----------------*/
+.header{
+    max-width: 100%;
+    padding: 20px 100px;
+    background-color: hsl(217, 28%, 15%);
+    box-sizing: border-box;
+}
+.header li{
+    font-family: 'Open Sans', sans-serif;
+    margin-left: 50px;
+}
+/*  -------------- introduction ---------------- */
+.allIntroduction{
+    position:relative;
+    background-color: hsl(217, 28%, 15%);
+    z-index: -4;
+    padding-bottom: 150px;
+}
+.allIntroduction .imgCurvy{
+    position:absolute;
+    bottom:-10px;
+    z-index: -3;
+}
+.allIntroduction img{
+    box-sizing: border-box;
+    height: 100%;
+}
+.introduction{
+    display: flex;
+    flex-direction: column;
+    max-width: 700px;
+    margin:0 auto;
+    text-align: center;
+    padding: 60px 0;
+}
+.introduction h1{
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    letter-spacing: .05em;
+}
+.introduction p{
+    padding: 0 30px;
+    font-size: 1.3em;
+}
+.introduction button{
+    width: 250px;
+    font-size: 1.3em;
+    font-family: 'Open Sans', sans-serif;
+    margin: 10px auto;
+    padding: 10px 0;
+    border-radius: 25px;
+    background-color: hsl(198, 60%, 50%);
+    color:hsl(0, 0%, 100%);
+    border:none;
+}
