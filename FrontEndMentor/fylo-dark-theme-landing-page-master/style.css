@@ -1,0 +1,268 @@
+/*   ---------------General styles---------------------- */
+body{
+    margin: 0;
+    font-size: 14px;
+    font-family: 'Raleway', sans-serif;
+}
+.title{
+    font-family: 'Raleway', sans-serif;
+}
+/*  ---------------- Global Container -----------------  */
+.siteContainer{
+    max-width: 1440px;
+    background-color:hsl(217, 28%, 15%);
+    margin: 0 auto;
+    color:azure;
+}
+
+/*  ------------------- Menu  --------------------------  */
+.menu{
+    display: flex;
+    padding: 20px 100px;
+    align-items: center;
+    justify-content: space-between;
+}
+.menu a{
+    color:azure;
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif;
+    margin-right: 50px;
+    letter-spacing: .1em;
+}
+
+/*  ------------------ introduction -----------------------------  */
+.intro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding: 40px 0 220px 0;
+}
+.intoImg{
+    z-index: 2;
+}
+.intoDescription{
+    max-width: 500px;
+    text-align: center;
+    z-index: 2;
+}
+.intoDescription h1{
+    margin-top:40px;
+    line-height: 1.5em;
+}
+.intoDescription p{
+    padding:0 45px;
+    line-height: 1.5em;
+    margin-bottom: 25px;
+}
+.intoDescription button{
+    padding: 10px 60px;
+    font-family: 'Raleway', sans-serif;
+    border-radius: 20px;
+    border:none;
+    background-color:hsl(176, 68%, 64%);
+    color: azure;
+    font-weight: bold;
+}
+.curves{
+    position: absolute;
+    bottom: 0px;
+    z-index: 1;
+}
+.curves img{
+    width: 100%;
+}
+
+/*  ------------------  Qualities ----------------------- */
+.qualities ul{
+    margin-top:-10px;
+    display: flex;
+    position: relative ;
+    list-style: none;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: hsl(218, 28%, 13%);
+    z-index: 3;
+}
+.qualities li{
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 80px;
+}
+.qualities li p{
+    max-width: 380px;
+    text-align: center;
+    line-height: 1.5em;
+}
+.qualities li h1{
+    text-align: center;
+}
+
+/* ------------------ Stay productive -------------------------- */
+.stayProductive{
+    background-color: hsl(218, 28%, 13%);
+    margin-top: -15px;
+    display: flex;
+    padding: 40px 100px;  
+    justify-content: space-between;  
+}
+
+.stayProductive .text{
+    padding: 100px 0 0 40px
+}
+.stayProductive .text h1{
+    max-width: 300px;
+}
+.stayProductive .text p{
+    line-height: 1.5em;
+}
+.stayProductive .text a{
+    color: hsl(176, 68%, 64%);
+    border-bottom: 1px solid hsl(176, 68%, 64%);
+}
+.stayProductive .text a img{
+    width: 12px;
+    margin: 0;
+}
+
+/* ------------------  Comments  ---------------------  */
+.comments{
+    margin-top: -15px;
+    background-color: hsl(218, 28%, 13%);
+}
+.comments ul{
+    position:relative;
+    list-style:none;
+    padding: 60px 100px;
+    display: flex;
+    justify-content: space-between;
+}
+.comments li{
+    background-color: hsl(217, 28%, 15%);
+    width: 27%;
+    padding:30px 10px 20px 30px;
+    border-radius: 5px;
+    box-shadow: 10px 10px 10px  hsl(217, 28%, 15%);
+    z-index: 2;
+}
+.comments li>p{
+    line-height: 1.5em;
+    margin-bottom: 20px;
+}
+.profile{
+    display: flex;
+    height: 60px;
+    align-items: center;
+}
+.profileImg{
+    width: 15%;
+    padding-top: 10px;
+}
+.profile img{
+    width: 100%;
+    border-radius: 50%;
+}
+.profileName{
+    padding-left: 10px;
+}
+.profileName h2{
+    font-size: 1.125em;
+}
+.profileName p {
+    margin-top: -10px;
+    font-size: .8em;
+}
+.quotes{
+    position: absolute;
+    z-index: 1;
+    top:30px;
+    left:90px
+}
+
+/*  ----------------- Call to action -----------------  */
+.cta{
+    margin-top: -20px;
+    min-height: 200px;
+    background-color: hsl(218, 28%, 13%);
+    position: relative;
+}
+.ctaContainer{
+    width: 900px;
+    padding: 30px 0;
+    text-align: center;
+    margin:0 auto;
+    background-color: hsl(217, 28%, 15%);
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px hsl(218, 28%, 13%);
+    position: absolute;
+    bottom: -100px;
+    right: 300px;
+}
+.ctaContainer p{
+    max-width: 620px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    line-height: 1.5em;
+}
+.ctaContainer input{
+    width: 50%;
+    height: 30px;
+    border-radius: 20px;
+    border:none;
+    outline: none;
+    padding-left: 15px;
+    margin-right: 30px;
+}
+.ctaContainer button{
+    padding:10px 20px;
+    border-radius: 20px;
+    border:none;
+    background-color: hsl(176, 68%, 64%); 
+    color:#FFF;
+    font-weight: bold;
+}
+
+/*  --------------------- FinalInfo ----------------------------  */
+.finalInfo>img{
+    margin-top: 150px;
+    margin-left: 100px;
+}
+.finalInfo ul{
+    display: flex;
+    padding: 40px 100px;
+    list-style: none;
+}
+.finalInfo ul>li{
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+}
+.finalInfo ul li p>img {
+    margin-right: 20px;
+}
+.local{
+    width: 35%;
+}
+.contact{
+    width: 20%;
+}
+.icons ul{
+    padding: 0px;
+}
+.icons ul li img{
+    padding: 10px;
+    width: 20px;
+    border-radius: 50%;
+    border:2px solid #fff
+}
+/*  -------------------- attribution --------------------  */
+.attribution{
+    padding: 10px 0 ;
+    text-align: center;
+}
+.attribution a{
+    color:hsl(176, 68%, 64%);
+    text-decoration: none;
+}
