@@ -35,7 +35,7 @@ body{
 }
 
 /*  ------------------ introduction -----------------------------  */
-.intro{
+.into{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -111,8 +111,15 @@ body{
     padding: 40px 100px;  
     justify-content: space-between;  
 }
+.img {
+    width: 50%;;
+}
+.img>img{
+    width: 100%;
+}
 
 .stayProductive .text{
+    width: 40%;
     padding: 100px 0 0 40px
 }
 .stayProductive .text h1{
@@ -254,18 +261,16 @@ form{
     list-style: none;
 }
 .finalInfo ul>li{
-    display: flex;
-    flex-direction: column;
     padding: 0 20px;
 }
 .finalInfo ul li p>img {
-    margin-right: 20px;
+    margin-right: 10px;
 }
 .local{
     width: 35%;
 }
 .contact{
-    width: 20%;
+    width: 25%;
 }
 .icons ul{
     padding: 0px;
@@ -290,4 +295,51 @@ form{
 }
 .attribution a:hover{
     text-decoration: underline;
+}
+
+
+@media (max-width:1170px) and (min-width:1040px){
+    .stayProductive .text{
+        padding-top: 20px;
+    }
+    
+}
+
+@media (max-width:1039px) and (min-width:600px){
+    .into{
+        padding-bottom: 100px;
+    }
+    .qualities img{
+        max-width: 70%;
+        display:block;
+        margin:0 auto;
+    }
+    .stayProductive .text{
+        padding-top: 20px;
+    }
+    .comments ul{
+        flex-wrap:wrap;
+    	justify-content: center;
+    }
+    .comments ul li{
+        width: 35%;
+        margin-bottom: 20px;
+        margin-right:10%;
+    }
+    .profile{
+        justify-content: center;
+    }
+    .finalInfo>ul{
+        padding: 40px;
+        
+    }
+    .icons ul{
+        display: flex;
+        flex-direction: column;
+    }
+    .contact{
+        width: 30%;
+        font-size: 12px;
+    }
+   
 }

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+    <div>Camisa - R$ <span class='preco'></span></div>
+    <button class='adicionar'>adicionar</button>
+    <button class='remover'>remover</button>
+    <span class='total'></span>
+    <p>Total: <span class='precoTotal'></span></p>
+    <script>
+        const dados = {
+            preco: 49,
+            total:0
+        };
+
+        const preco = document.querySelector('.preco');
+        const precoTotal = document.querySelector('.precoTotal');
+        const total = document.querySelector('.total');
+        const remover = document.querySelector('.remover');
+        const adicionar = document.querySelector('.adicionar');
+
+        preco.innerText = dados.preco
+        total.innerText = dados.total
+        precoTotal.innerText = dados.preco * dados.total
+
+        const  atualizarUI = () =>{
+            total.innerText = dados.total
+            precoTotal.innerText = dados.preco * dados.total
+        }   
+        const incrementar = () => {
+            dados.total++;
+            atualizarUI()
+        }
+        const diminuir = () => {
+            if (dados.total>0){
+                dados.total--;
+                atualizarUI()
+            }
+        }
+
+        adicionar.addEventListener('click', incrementar)
+        remover.addEventListener('click', diminuir)
+    </script>
+</body>
+</html>
