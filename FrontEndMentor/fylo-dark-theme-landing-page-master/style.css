@@ -26,6 +26,9 @@ body{
     align-items: center;
     justify-content: space-between;
 }
+.logo{
+    width: 100px;
+}
 .menu a{
     color:azure;
     text-decoration: none;
@@ -305,9 +308,24 @@ form{
     
 }
 
-@media (max-width:1039px) and (min-width:600px){
+
+
+@media (max-width:1039px){
+    .menu a{
+        margin-right: 15px;
+    }
+  
+    .menuLogo{
+        max-width: 150px;
+    }
+    .menuLogo img{
+        width: 100%;
+    }
     .into{
         padding-bottom: 100px;
+    }
+    .intoImg img{
+        width: 100%;
     }
     .qualities img{
         max-width: 70%;
@@ -320,9 +338,16 @@ form{
     .comments ul{
         flex-wrap:wrap;
     	justify-content: center;
+        padding: 60px 30px;
+    }
+    .quotes{
+        position: absolute;
+        z-index: 1;
+        top:30px;
+        left:15px
     }
     .comments ul li{
-        width: 35%;
+        width: 30%;
         margin-bottom: 20px;
         margin-right:10%;
     }
@@ -341,5 +366,96 @@ form{
         width: 30%;
         font-size: 12px;
     }
-   
 }
+@media (max-width:600px){
+    .menu{
+        padding: 10px 25px 10px 25px;
+    }
+    *{
+        font-size: 12px;
+    }
+   .logo{width:80px}
+   .menu a{
+    margin-right: 5px;
+    }
+    .into{
+        padding:40px 25px 40px 25px ;
+      
+    }
+    .qualities ul{
+        flex-direction: column;
+        padding: 0;
+        padding:40px 25px 40px 25px ;
+    }
+    .qualities ul li{
+        width: 100%;
+        padding-bottom: 40px;
+    }
+    .stayProductive{
+        flex-direction: column;
+        padding: 0 25px 20px 25px;
+    }
+    .stayProductive div{
+        width: 100%;
+    }
+    .stayProductive .text{
+        width: 100%;
+        padding: 0px;
+        text-align: center;
+    }
+    .stayProductive .text h1{
+        max-width: 100%;
+    }
+    .stayProductive .text p{
+        line-height: 1.5em;
+    }
+    .stayProductive .text a{
+        color: hsl(176, 68%, 64%);
+        border-bottom: 1px solid hsl(176, 68%, 64%);
+    }
+    .stayProductive .text a:hover{
+        cursor:pointer;
+        color: #FFF     ;
+        border-color: #FFF;
+    }
+    .stayProductive .text a img{
+        width: 12px;
+        margin: 0;
+        z-index: -1;
+    }
+    .comments ul li{
+        width: 100%;
+        margin:0 0 20px 0;
+        padding: 40px 25px;
+    }
+    .cta{
+        min-height: 100px;
+    }
+    form{
+        flex-direction: column;
+    }
+    .ctaContainer input{
+        width: 100%;
+        margin-bottom: 10px ;
+        padding-left:0 ;
+    }
+    .finalInfo>img{
+        margin-top: 150px;
+        margin-left: 100px;
+    }
+    .finalInfo ul{
+        flex-direction: column;
+        justify-content: center;
+        padding: 40px 25px 10px 25px;
+
+    }
+    .finalInfo ul li{
+        width: 100%;
+        text-align: center;
+        padding: 5px 0;
+    }
+    .icons ul{
+        flex-direction: row;
+    }
+}
+
