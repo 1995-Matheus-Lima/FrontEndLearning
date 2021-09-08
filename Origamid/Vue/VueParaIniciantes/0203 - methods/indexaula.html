@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="./vue.js"></script>
+  <title>Vue.js</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+
+<body>
+<div id="app">
+    <button @click='incrementar'>incrementar</button>
+    <button @click='diminuir'>diminuir</button>
+    <p>{{total}}</p>
+    <p>Instrumento selecionado: {{instrumento}}</p>
+    <button @click='mudarNome("violão")'>Violão</button>
+    <button @click='mudarNome("Guitarra")'>Guitarra</button>
+    <button @click='mudarNome("baixo")'>baixo</button>
+</div>
+<script>
+    const vm = new Vue({
+        el:'#app',
+        data: {
+            total:0,
+            instrumento:''
+        },
+        methods: {
+            incrementar(){
+                this.total++
+            },
+            diminuir(){
+                if(this.total > 0){
+                    this.total--
+                }
+            },
+            mudarNome(instrumento){
+                this.instrumento = instrumento
+                this.selecionado(instrumento)
+            },
+            selecionado(x){
+                console.log(`O atual instrimento selecionado é ${x}`)
+            }
+        }
+    })
+
+    
+</script>
+
+</body>
+
+</html>

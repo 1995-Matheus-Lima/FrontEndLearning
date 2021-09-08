@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="./vue.js"></script>
+  <title>Vue.js</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+
+<body>
+    <!--
+     Utilizando a api:
+     https://api.iextrading.com/1.0/stock/aapl/quote
+
+     crie um metodo que faça o fetch da resposta acima
+     o metodo deve ser ativado ao clique no botão ver preço
+
+    -->
+<div id="app">
+    <button @click='getInfo("0740600")'>aruja</button>
+    <button @click='getInfo("07500000")'>Santa Isabel</button>
+    <button @click='getInfo("08710000")'>Mogi das Cruzes</button>
+    <p>{{informacoes}}</p>
+</div>
+<script>
+
+    const vm = new Vue({
+        el:'#app',
+        data: {
+            informacoes:''
+        },
+        methods: {
+            getInfo(cep){
+              fetch(`https://viacep.com.br/ws/${cep}/json/unicode/`)
+                .then(r => r.json())
+                .then(r => this.informacoes = r)  
+            },
+        }
+    })
+
+    
+</script>
+
+</body>
+
+</html>

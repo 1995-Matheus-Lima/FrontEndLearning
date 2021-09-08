@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="./vue.js"></script>
+  <title>Vue.js</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <ul>
+      <li><a v-on:click.prevent='handClick' href="https://api.origamid.dev/stock/aapl/quote">Apple</a></li>
+      <li><a v-on:click.prevent='handClick' href="https://api.origamid.dev/stock/googl/quote">Google</a></li>
+      <li><a v-on:click.prevent='handClick' href="https://api.origamid.dev/stock/amzn/quote">Amazon</a></li>
+      <li><a v-on:click.prevent='handClick' href="https://api.origamid.dev/stock/ebay/quote">Ebay</a></li>
+      <li><a v-on:click.prevent='handClick' href="https://api.origamid.dev/stock/pypl/quote">Paypal</a></li>
+    </ul>
+
+    <h1>Company name: {{cn}} </h1>
+    <h1>Latest Price: {{lP}}</h1>
+    <h1>Market capital: {{mc}}</h1>
+  </div>
+  <script>
+    vm = new Vue({
+      el:"#app",
+      data:{
+        cn:'',
+        lP:'',
+        mc:''
+      },
+      methods:{
+        handClick(event){
+          fetch(event.target.href)
+          .then(r => r.json())
+          .then(json => {
+            console.log(json),
+            this.cn = json.companyName;
+            this.lP = json.latestPrice;
+            this.mc = json.marketCap;
+          })
+        }
+      }
+    })
+  </script>
+  <!--
+    Utilizando API
+    https://api.origamid.dev/stock/aapl/quote
+  
+    Adicione um evento de clique a cada <a> do html
+    acima e previna o comportamento padrão.
+  
+    Faça o fetch dos dados do href ao click e mostre na
+    interface o companyName, latestPrice, marketCap
+  -->
+
+</body>
+
+</html>

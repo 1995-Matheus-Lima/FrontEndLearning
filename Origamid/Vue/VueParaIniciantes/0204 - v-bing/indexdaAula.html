@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+    <div id='app'>
+        <a v-bind:href="link" target="_blank">Meu facebook</a> | 
+        <a :href="link" target="_blank">Meu facebook</a> | 
+        <a :href="namorando? linkbb : link" target="_blank"> tem mozão?</a>
+    </div>
+    <script>
+        vm = new Vue({
+            el:'#app',
+            data:{
+                link: 'https://www.facebook.com/matheus.henrique.503092/',
+                linkbb: 'https://www.facebook.com/emily.mancilha',
+                namorando:true
+            }
+        })
+    </script>
+</body>
+</html>
